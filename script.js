@@ -240,7 +240,12 @@ if (blog) {
     document.querySelector(".blog-date").innerText = new Date(blog.date).toLocaleString();
     document.querySelector(".blog-content").innerText = blog.content;
 } else {
-    document.querySelector(".blog-container").innerHTML = "<h2>Blog not found</h2>";
+   const blogContainer = document.querySelector(".blog-container");
+if (blogContainer) {
+    blogContainer.innerHTML = "<h2>Blog not found</h2>";
+}
+
+   
 }
 
 
